@@ -28,5 +28,5 @@ echo -e "setting up configration files for the i3 wm \n"
 git clone https://github.com/DarkIce000/dotfiles.git
 cd dotfiles
 mkdir -p ~/.config/i3/
-ln -sf i3config.conf ~/i3config.conf
-ln -sf config ~/.config/i3/config
+ln -sf ~/dotfiles/i3config.conf ~/i3config.conf
+ln -sf ~/dotfiles/config ~/.config/i3/config
