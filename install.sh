@@ -27,5 +27,6 @@ echo -e "Software installtion finished .........................................
 echo -e "setting up configration files for the i3 wm \n"
 git clone https://github.com/DarkIce000/dotfiles.git
 cd dotfiles
+mkdir -p ~/.config/i3/
 ln -s i3config.conf ~/i3config.conf
 ln -s config ~/.config/i3/config
