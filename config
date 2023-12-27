@@ -2,15 +2,15 @@ set $mod Mod4
 floating_modifier $mod
 
 # system essentials 
-font pango:Ubuntu regular 9
+font pango:Ubuntu regular 8
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/libexec/gsd-xsettings
 exec --no-startup-id kdeconnect-indicator
-exec --no-startup-id xrandr --output eDP-1 --mode 1600x900
-
+#exec --no-startup-id xrandr --output eDP-1 --mode 1600x900
+exec --no-startup-id nitrogen --restore
 
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 10%+
@@ -28,10 +28,10 @@ bindsym XF86AudioPrev exec playerctl previous
 
 #Applications 
 bindsym $mod+space exec  rofi -show combi -combi-modi "drun#run#filebrowser" -modi combi -show-icons
-bindsym $mod+Return exec xfce4-terminal 
+bindsym $mod+Return exec gnome-terminal 
 bindsym $mod+c exec firefox
 bindsym $mod+semicolon exec code
-bindsym $mod+n exec thunar 
+bindsym $mod+n exec nemo 
 
 # MyPersonal Settings
 bindsym Print exec xfce4-screenshooter
@@ -154,7 +154,7 @@ set $urgent-bg-color     #E53935
 
 # bar
 bar {
-  	status_command i3status -c /home/mint/i3status.conf
+  	status_command i3status -c ~/i3status.conf
 	colors {
 		background $bg-color
 	    	separator #757575
